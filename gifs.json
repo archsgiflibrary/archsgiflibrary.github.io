@@ -1,0 +1,53 @@
+[
+  {
+    "id": "tyris-mezar",
+    "title": {
+      "en": "Tyris Realistic Grave",
+      "tr": "Tyris Gerçekçi Mezar"
+    },
+    "description": {
+      "en": "Paste this on Discord or any platform.",
+      "tr": "Bunu Discord'a ya da herhangi bir platforma yapıştırınız."
+    },
+    "url": "https://raw.githubusercontent.com/archziwski/Arch-s-Gif-Library/refs/heads/main/tyris%20ger%C3%A7ek%C3%A7i%20mezar%201.gif",
+    "preview": "https://github.com/user-attachments/assets/4e8146d1-7977-40bb-9d8a-af82f6f14c0f",
+    "width": 597,
+    "height": 335,
+    "category": "tr",
+    "tags": ["turkish", "meme", "discord", "funny"]
+  },
+  {
+    "id": "suntzu-racist",
+    "title": {
+      "en": "Sun Tzu – They'll Call You a Racist But Never a Liar",
+      "tr": "Sun Tzu – Sizi Irkçı Yollar Ama Yalancı Demeyiz"
+    },
+    "description": {
+      "en": "Classic Sun Tzu quote meme.",
+      "tr": "Klasik Sun Tzu alıntı memesi."
+    },
+    "url": "https://raw.githubusercontent.com/archziwski/Arch-s-Gif-Library/refs/heads/main/suntzu.gif",
+    "preview": "https://github.com/user-attachments/assets/fcb66950-8a8d-47a0-a78b-d226575cd812",
+    "width": 263,
+    "height": 192,
+    "category": "en",
+    "tags": ["english", "meme", "suntzu", "quote", "funny"]
+  },
+  {
+    "id": "absolute-cinema-racism",
+    "title": {
+      "en": "Absolute Cinema Racism",
+      "tr": "Mutlak Sinema Irkçılığı"
+    },
+    "description": {
+      "en": "Absolute cinema moment.",
+      "tr": "Mutlak sinema anı."
+    },
+    "url": "https://raw.githubusercontent.com/archziwski/Arch-s-Gif-Library/refs/heads/main/absolute-cinema-racism.gif",
+    "preview": "https://github.com/user-attachments/assets/89b6e7aa-85d4-43a3-b08c-618dd51e7a98",
+    "width": 489,
+    "height": 372,
+    "category": "en",
+    "tags": ["english", "meme", "cinema", "absolute", "funny"]
+  }
+]
