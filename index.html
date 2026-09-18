@@ -3,19 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Arch's Gif Library - Collection of funny GIFs for Discord and social media">
+  <meta name="description" content="AGL - Arch's Gif Library. Hand-picked GIFs for Discord, social media & more.">
+  <meta name="theme-color" content="#6366f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f1a" media="(prefers-color-scheme: dark)">
   <title>AGL - Arch's Gif Library</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-content">
-      <a href="#" class="logo" aria-label="AGL Home">
-        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <!-- Theme script runs immediately to prevent flash -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('agl-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="AGL Home">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <rect width="32" height="32" rx="8" fill="currentColor"/>
           <path d="M8 12h16M8 16h12M8 20h8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
@@ -23,13 +39,13 @@
       </a>
       <nav class="nav" aria-label="Main navigation">
         <div class="nav-group">
-          <button class="btn btn-ghost lang-toggle" id="langToggle" aria-label="Toggle language">
+          <button class="btn btn-ghost lang-toggle" id="langToggle" aria-label="Toggle language" type="button">
             <span class="lang-current" id="langCurrent">EN</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
-          <button class="btn btn-ghost theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <button class="btn btn-ghost theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
             <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -49,121 +65,147 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.38-.44.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.675 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.083.083 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 1 .041-.106 13.107 13.107 0 0 0 1.872-.892.077.077 0 0 1 .088-.007c.213.023.426.046.64.067a.072.072 0 0 0 .072-.062c.024-.381.064-.77.12-1.17a.076.076 0 0 1 .075-.074c3.235-.94 6.232-2.423 8.857-4.565a.065.065 0 0 0 .022-.102.072.072 0 0 0-.072-.063 18.657 18.657 0 0 0-2.356-1.144.07.07 0 0 0-.078.012 11.186 11.186 0 0 1-.872-.528.071.071 0 0 1-.028-.112 8.27 8.27 0 0 1 .24-.955.061.061 0 0 1 .077-.031 9.513 9.513 0 0 1 1.137-.36.073.073 0 0 1 .071.044c2.423.957 4.576 2.31 6.345 3.972a.07.07 0 0 0 .077-.016c.589-1.536.916-3.193.916-4.915a.07.07 0 0 0-.07-.073zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418z"/>
             </svg>
-            <span data-i18n="discord">Discord</span>
+            <span data-i18n="nav.discord">Discord</span>
           </a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main class="main">
-    <section class="hero">
+  <main class="main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container">
-        <h1 class="hero-title" data-i18n="hero.title">Arch's Gif Library</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Your collection of hand-picked GIFs for Discord, social media & more</p>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-value" id="totalGifs">0</span>
-            <span class="stat-label" data-i18n="stats.gifs">GIFs</span>
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title" data-i18n="hero.title">Arch's Gif Library</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">Your collection of hand-picked GIFs for Discord, social media & more</p>
+          <div class="hero-stats" role="list" aria-label="Statistics">
+            <div class="stat" role="listitem">
+              <span class="stat-value" id="totalGifs">0</span>
+              <span class="stat-label" data-i18n="stats.gifs">GIFs</span>
+            </div>
+            <div class="stat" role="listitem">
+              <span class="stat-value" id="totalCategories">0</span>
+              <span class="stat-label" data-i18n="stats.categories">Categories</span>
+            </div>
+            <div class="stat" role="listitem">
+              <span class="stat-value" id="totalTags">0</span>
+              <span class="stat-label" data-i18n="stats.tags">Tags</span>
+            </div>
           </div>
-          <div class="stat">
-            <span class="stat-value" id="totalCategories">0</span>
-            <span class="stat-label" data-i18n="stats.categories">Categories</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value" id="totalTags">0</span>
-            <span class="stat-label" data-i18n="stats.tags">Tags</span>
-          </div>
+        </div>
+        <div class="hero-decoration" aria-hidden="true">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
         </div>
       </div>
     </section>
 
-    <section class="toolbar">
-      <div class="container toolbar-content">
-        <div class="search-box">
+    <section class="toolbar" aria-label="Search and filter">
+      <div class="container toolbar-inner">
+        <div class="search-box" role="search">
           <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="" data-i18n-placeholder="search.placeholder" aria-label="Search GIFs">
-          <button class="search-clear" id="searchClear" aria-label="Clear search" hidden>
+          <input type="search" id="searchInput" class="search-input" placeholder="" data-i18n-placeholder="search.placeholder" aria-label="Search GIFs" autocomplete="off" spellcheck="false">
+          <button class="search-clear" id="searchClear" aria-label="Clear search" type="button" hidden>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
+          <span class="search-hint" id="searchHint" data-i18n="search.hint">Press <kbd>/</kbd> to focus</span>
         </div>
         <div class="filter-group">
           <label for="categoryFilter" class="visually-hidden" data-i18n="filter.label">Filter by category</label>
-          <select id="categoryFilter" class="filter-select" aria-label="Filter by category">
-            <option value="all" data-i18n="filter.all">All</option>
-            <option value="tr" data-i18n="filter.turkish">Turkish</option>
-            <option value="en" data-i18n="filter.english">English</option>
-          </select>
+          <div class="select-wrapper">
+            <select id="categoryFilter" class="filter-select" aria-label="Filter by category">
+              <option value="all" data-i18n="filter.all">All</option>
+              <option value="tr" data-i18n="filter.turkish">Turkish</option>
+              <option value="en" data-i18n="filter.english">English</option>
+            </select>
+            <svg class="select-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
         </div>
-        <button class="btn btn-primary submit-btn" id="submitBtn" data-i18n="submit.title">Submit GIF</button>
+        <button class="btn btn-primary submit-btn" id="submitBtn" data-i18n="submit.title" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <span data-i18n="submit.title">Submit GIF</span>
+        </button>
       </div>
     </section>
 
-    <section class="gallery-section">
+    <section class="gallery-section" aria-labelledby="gallery-title">
       <div class="container">
         <div class="gallery-header">
-          <h2 class="gallery-title" data-i18n="gallery.title">GIF Gallery</h2>
-          <p class="gallery-count" id="galleryCount" aria-live="polite"></p>
+          <h2 id="gallery-title" class="gallery-title" data-i18n="gallery.title">GIF Gallery</h2>
+          <p class="gallery-count" id="galleryCount" aria-live="polite" aria-atomic="true"></p>
         </div>
         <div class="gallery-grid" id="galleryGrid" role="list" aria-label="GIF gallery"></div>
         <div class="empty-state" id="emptyState" hidden>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            <line x1="8" y1="8" x2="14" y2="14"></line>
-            <line x1="14" y1="8" x2="8" y2="14"></line>
-          </svg>
-          <p data-i18n="empty.title">No GIFs found</p>
-          <p data-i18n="empty.subtitle">Try adjusting your search or filter</p>
+          <div class="empty-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="8" x2="14" y2="14"></line>
+              <line x1="14" y1="8" x2="8" y2="14"></line>
+            </svg>
+          </div>
+          <p class="empty-title" data-i18n="empty.title">No GIFs found</p>
+          <p class="empty-subtitle" data-i18n="empty.subtitle">Try adjusting your search or filter</p>
+          <button class="btn btn-ghost" id="clearFilters" type="button" data-i18n="empty.clear">Clear filters</button>
+        </div>
+        <div class="loading-state" id="loadingState" hidden>
+          <div class="spinner" aria-hidden="true"></div>
+          <p data-i18n="loading">Loading GIFs...</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-content">
-      <p class="footer-text" data-i18n="footer.made">Made with ❤️ by Arch</p>
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-text" data-i18n="footer.made">Made with <span class="heart">❤️</span> by Arch</p>
       <div class="footer-links">
-        <a href="https://github.com/archziwski/Arch-s-Gif-Library" target="_blank" rel="noopener noreferrer" data-i18n="footer.github">GitHub Repo</a>
+        <a href="https://github.com/archziwski/Arch-s-Gif-Library" target="_blank" rel="noopener noreferrer" data-i18n="footer.github">GitHub</a>
         <a href="https://discord.gg/UhSHAJ4MR" target="_blank" rel="noopener noreferrer" data-i18n="footer.discord">Discord</a>
+        <a href="#submit" id="footerSubmit" data-i18n="footer.submit">Submit GIF</a>
       </div>
     </div>
   </footer>
 
+  <!-- Submit Modal -->
   <dialog class="modal" id="submitModal" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-backdrop" tabindex="-1"></div>
-    <div class="modal-content">
+    <div class="modal-overlay" tabindex="-1"></div>
+    <div class="modal-panel">
       <header class="modal-header">
         <h3 id="modalTitle" data-i18n="modal.title">Submit a GIF</h3>
-        <button class="modal-close" id="modalClose" aria-label="Close modal">
+        <button class="modal-close" id="modalClose" aria-label="Close modal" type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </header>
       <form class="modal-form" id="submitForm" novalidate>
         <div class="form-group">
           <label for="gifTitle" class="form-label" data-i18n="modal.fields.title">Title</label>
-          <input type="text" id="gifTitle" name="title" class="form-input" required placeholder="" data-i18n-placeholder="modal.placeholders.title">
+          <input type="text" id="gifTitle" name="title" class="form-input" required placeholder="" data-i18n-placeholder="modal.placeholders.title" autocomplete="off">
         </div>
         <div class="form-group">
           <label for="gifCategory" class="form-label" data-i18n="modal.fields.category">Category</label>
-          <select id="gifCategory" name="category" class="form-select" required>
-            <option value="" disabled selected data-i18n="modal.placeholders.category">Select category</option>
-            <option value="tr" data-i18n="filter.turkish">Turkish</option>
-            <option value="en" data-i18n="filter.english">English</option>
-          </select>
+          <div class="select-wrapper">
+            <select id="gifCategory" name="category" class="form-select" required>
+              <option value="" disabled selected data-i18n="modal.placeholders.category">Select category</option>
+              <option value="tr" data-i18n="filter.turkish">Turkish</option>
+              <option value="en" data-i18n="filter.english">English</option>
+            </select>
+            <svg class="select-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
         </div>
         <div class="form-group">
-          <label for="gifUrl" class="form-label" data-i18n="modal.fields.url">GIF URL (raw .gif link)</label>
-          <input type="url" id="gifUrl" name="url" class="form-input" required placeholder="" data-i18n-placeholder="modal.placeholders.url">
-          <p class="form-hint" data-i18n="modal.hints.url">Must be a direct link to a .gif file</p>
+          <label for="gifUrl" class="form-label" data-i18n="modal.fields.url">GIF URL</label>
+          <input type="url" id="gifUrl" name="url" class="form-input" required placeholder="" data-i18n-placeholder="modal.placeholders.url" autocomplete="off">
+          <p class="form-hint" data-i18n="modal.hints.url">Direct link to a .gif file (raw URL)</p>
         </div>
         <div class="form-group">
-          <label for="gifTags" class="form-label" data-i18n="modal.fields.tags">Tags (comma separated)</label>
-          <input type="text" id="gifTags" name="tags" class="form-input" placeholder="" data-i18n-placeholder="modal.placeholders.tags">
-          <p class="form-hint" data-i18n="modal.hints.tags">e.g., funny, meme, discord, reaction</p>
+          <label for="gifTags" class="form-label" data-i18n="modal.fields.tags">Tags</label>
+          <input type="text" id="gifTags" name="tags" class="form-input" placeholder="" data-i18n-placeholder="modal.placeholders.tags" autocomplete="off">
+          <p class="form-hint" data-i18n="modal.hints.tags">Comma separated: funny, meme, discord</p>
         </div>
         <div class="form-group">
           <label for="gifDescription" class="form-label" data-i18n="modal.fields.description">Description (optional)</label>
@@ -183,13 +225,15 @@
     </div>
   </dialog>
 
-  <dialog class="modal" id="toastModal" aria-live="polite" aria-atomic="true">
-    <div class="toast" id="toast" role="alert">
-      <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"></svg>
-      <span class="toast-message" id="toastMessage"></span>
-    </div>
-  </dialog>
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" role="region" aria-live="polite" aria-label="Notifications"></div>
 
-  <script type="module" src="assets/js/app.js"></script>
+  <!-- Keyboard shortcut hint -->
+  <div class="shortcut-hint" id="shortcutHint" hidden>
+    <kbd>/</kbd> <span data-i18n="shortcut.search">Search</span>
+    <kbd>Esc</kbd> <span data-i18n="shortcut.close">Close</span>
+  </div>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

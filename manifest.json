@@ -1,0 +1,17 @@
+{
+  "name": "AGL - Arch's Gif Library",
+  "short_name": "AGL",
+  "description": "Hand-picked GIFs for Discord, social media & more",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafbfe",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
