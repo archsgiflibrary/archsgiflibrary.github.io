@@ -354,12 +354,10 @@
     }
   }
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
     const submitBtn = $('#modalSubmit');
-    const btnText = $('.btn-text', submitBtn);
-    const btnLoading = $('.btn-loading', submitBtn);
 
     const formData = new FormData(form);
     const data = {
@@ -375,67 +373,27 @@
       return;
     }
 
-    submitBtn.disabled = true;
-    btnText.hidden = true;
-    btnLoading.hidden = false;
+    const body = [
+      '**Title:** ' + data.title,
+      '**Category:** ' + data.category,
+      '**URL:** ' + data.url,
+      '**Tags:** ' + (data.tags.join(', ') || 'N/A'),
+      '**Description:** ' + (data.description || 'N/A'),
+      '',
+      '---',
+      '_Submitted via AGL website_'
+    ].join('\n');
 
-    try {
-      let token = '';
-      try { token = localStorage.getItem('agl-github-token') || ''; } catch (err) {}
+    const issueUrl = 'https://github.com/archsgiflibrary/archsgiflibrary.github.io/issues/new?' +
+      new URLSearchParams({
+        title: '[GIF Submission] ' + data.title,
+        body: body,
+        labels: 'gif-submission,' + data.category
+      }).toString();
 
-      if (!token) {
-        const entered = prompt(t('modal.title') + '\n\nGitHub PAT (repo scope):');
-        if (!entered) {
-          submitBtn.disabled = false;
-          btnText.hidden = false;
-          btnLoading.hidden = true;
-          return;
-        }
-        token = entered.trim();
-        try { localStorage.setItem('agl-github-token', token); } catch (err) {}
-      }
-
-      const res = await fetch('https://api.github.com/repos/archsgiflibrary/archsgiflibrary.github.io/issues', {
-        method: 'POST',
-        headers: {
-          'Authorization': `token ${token}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          title: `[GIF Submission] ${data.title}`,
-          body: [
-            `**Title:** ${data.title}`,
-            `**Category:** ${data.category}`,
-            `**URL:** ${data.url}`,
-            `**Tags:** ${data.tags.join(', ') || 'N/A'}`,
-            `**Description:** ${data.description || 'N/A'}`,
-            '',
-            '---',
-            '_Submitted via AGL website_'
-          ].join('\n'),
-          labels: ['gif-submission', data.category]
-        })
-      });
-
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        if (res.status === 401) {
-          try { localStorage.removeItem('agl-github-token'); } catch (e) {}
-          throw new Error('Invalid token - please try again');
-        }
-        throw new Error(err.message || `HTTP ${res.status}`);
-      }
-
-      showToast('success', t('toast.saved'));
-      closeModal();
-    } catch (err) {
-      showToast('error', `${t('toast.failed')}: ${err.message || ''}`);
-    } finally {
-      submitBtn.disabled = false;
-      btnText.hidden = false;
-      btnLoading.hidden = true;
-    }
+    window.open(issueUrl, '_blank', 'noopener,noreferrer');
+    closeModal();
+    showToast('success', t('toast.saved'));
   }
 
   /* ---------- EVENT DELEGATION ---------- */
