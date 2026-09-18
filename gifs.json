@@ -49,5 +49,277 @@
     "height": 372,
     "category": "en",
     "tags": ["english", "meme", "cinema", "absolute", "funny"]
+  },
+  {
+    "id": "this-is-fine",
+    "title": {
+      "en": "This Is Fine",
+      "tr": "Her Şey Yolunda"
+    },
+    "description": {
+      "en": "Everything is fine... except it's not.",
+      "tr": "Her şey yolunda... ama aslında yolunda değil."
+    },
+    "url": "https://media.tenor.com/lHezSOjE0-MAAAAM/this-is-fine-this-is-fine-meme.gif",
+    "preview": "https://media.tenor.com/lHezSOjE0-MAAAAM/this-is-fine-this-is-fine-meme.gif",
+    "width": 498,
+    "height": 364,
+    "category": "en",
+    "tags": ["english", "meme", "this is fine", "dog", "fire", "reaction", "funny"]
+  },
+  {
+    "id": "drake-hotline-bling",
+    "title": {
+      "en": "Drake Hotline Bling",
+      "tr": "Drake Hotline Bling"
+    },
+    "description": {
+      "en": "The classic Drake approval/disapproval meme.",
+      "tr": "Klasik Drake onay/red memesi."
+    },
+    "url": "https://media.tenor.com/gmkF1pWcPq0AAAAM/drake-drake-meme.gif",
+    "preview": "https://media.tenor.com/gmkF1pWcPq0AAAAM/drake-drake-meme.gif",
+    "width": 498,
+    "height": 404,
+    "category": "en",
+    "tags": ["english", "meme", "drake", "approval", "disapproval", "hotline bling", "reaction"]
+  },
+  {
+    "id": "stonks",
+    "title": {
+      "en": "Stonks",
+      "tr": "Stonks"
+    },
+    "description": {
+      "en": "When something goes up but you have no idea what you're doing.",
+      "tr": "Bir şey yükseldiğinde ama ne yaptığını bilmediğinde."
+    },
+    "url": "https://media.tenor.com/lXQdKxVuBbIAAAAM/stonks.gif",
+    "preview": "https://media.tenor.com/lXQdKxVuBbIAAAAM/stonks.gif",
+    "width": 498,
+    "height": 373,
+    "category": "en",
+    "tags": ["english", "meme", "stonks", "stocks", "funny", "reaction"]
+  },
+  {
+    "id": "brainrot-horse",
+    "title": {
+      "en": "Brainrot Horse",
+      "tr": "Brainrot At"
+    },
+    "description": {
+      "en": "When the brainrot hits too hard.",
+      "tr": "Brainrot çok sert vurduğunda."
+    },
+    "url": "https://media.tenor.com/Goyim-brainrot-horse-gif/6339276426913194062",
+    "preview": "https://media.tenor.com/Goyim-brainrot-horse-gif/6339276426913194062",
+    "width": 498,
+    "height": 308,
+    "category": "en",
+    "tags": ["english", "brainrot", "horse", "meme", "funny", "tiktok"]
+  },
+  {
+    "id": "squidward-brainrot",
+    "title": {
+      "en": "Squidward Brainrot Ohio",
+      "tr": "Squidward Brainrot Ohio"
+    },
+    "description": {
+      "en": "Squidward with the Ohio brainrot energy.",
+      "tr": "Squidward Ohio brainrot enerjisiyle."
+    },
+    "url": "https://media.tenor.com/sigmahawktuahbruh-squidward-spongebob-brain-rot-ohio-skibidi-gif/15363356721548140051",
+    "preview": "https://media.tenor.com/sigmahawktuahbruh-squidward-spongebob-brain-rot-ohio-skibidi-gif/15363356721548140051",
+    "width": 120,
+    "height": 115,
+    "category": "en",
+    "tags": ["english", "brainrot", "squidward", "spongebob", "ohio", "skibidi", "funny"]
+  },
+  {
+    "id": "sigma-tuff",
+    "title": {
+      "en": "Boiii This So Tuff",
+      "tr": "Boiii Bu Çok Tuff"
+    },
+    "description": {
+      "en": "Sigma skull approves this message.",
+      "tr": "Sigma kafatası bu mesajı onaylıyor."
+    },
+    "url": "https://media.tenor.com/WhyDidentIDoThis-sigma-tuff-skibidi-gif/11861792804583676643",
+    "preview": "https://media.tenor.com/WhyDidentIDoThis-sigma-tuff-skibidi-gif/11861792804583676643",
+    "width": 389,
+    "height": 394,
+    "category": "en",
+    "tags": ["english", "brainrot", "sigma", "skibidi", "tuff", "meme", "funny"]
+  },
+  {
+    "id": "skibidi-sigma-spongebob",
+    "title": {
+      "en": "Skibidi Sigma Spongebob",
+      "tr": "Skibidi Sigma Spongebob"
+    },
+    "description": {
+      "en": "Spongebob goes full sigma mode.",
+      "tr": "Spongebob tam sigma moduna geçiyor."
+    },
+    "url": "https://media.tenor.com/tommuthy-skibidi-sigma-gif/14676015782751360833",
+    "preview": "https://media.tenor.com/tommuthy-skibidi-sigma-gif/14676015782751360833",
+    "width": 498,
+    "height": 498,
+    "category": "en",
+    "tags": ["english", "brainrot", "skibidi", "sigma", "spongebob", "funny"]
+  },
+  {
+    "id": "tatl ama sinirli",
+    "title": {
+      "en": "Sweet But Angry",
+      "tr": "Tatlı Ama Sinirli"
+    },
+    "description": {
+      "en": "Classic Turkish meme - sweet but angry.",
+      "tr": "Klasik Türk memesi - tatlı ama sinirli."
+    },
+    "url": "https://media.tenor.com/mrt36saliha-Tatl%C4%B1ama-Sinirli-gif/24133782",
+    "preview": "https://media.tenor.com/mrt36saliha-Tatl%C4%B1ama-Sinirli-gif/24133782",
+    "width": 498,
+    "height": 304,
+    "category": "tr",
+    "tags": ["turkish", "meme", "tatlı", "sinirli", "funny", "classic"]
+  },
+  {
+    "id": "torken-turken",
+    "title": {
+      "en": "Törken Türken",
+      "tr": "Törken Türken"
+    },
+    "description": {
+      "en": "Angry Turkish smiley meme.",
+      "tr": "Kızgın Türk emoji memesi."
+    },
+    "url": "https://media.tenor.com/undev-T%C3%B6rken-T%C3%BCrken-gif/1741561357260458466",
+    "preview": "https://media.tenor.com/undev-T%C3%B6rken-T%C3%BCrken-gif/1741561357260458466",
+    "width": 258,
+    "height": 195,
+    "category": "tr",
+    "tags": ["turkish", "meme", "törken", "türken", "angry", "funny"]
+  },
+  {
+    "id": "fatih-terim-shrek",
+    "title": {
+      "en": "Fatih Terim as Shrek",
+      "tr": "Fatih Terim Shrek Olarak"
+    },
+    "description": {
+      "en": "Fatih Terim dressed as Shrek - Turkish shitpost masterpiece.",
+      "tr": "Fatih Terim Shrek kıyafetli - Türk shitpost şaheseri."
+    },
+    "url": "https://media.tenor.com/galax0nline_99-fatih-terim-komik-shitpost-gif/2643969348397657632",
+    "preview": "https://media.tenor.com/galax0nline_99-fatih-terim-komik-shitpost-gif/2643969348397657632",
+    "width": 498,
+    "height": 400,
+    "category": "tr",
+    "tags": ["turkish", "meme", "fatih terim", "shrek", "shitpost", "funny", "futbol"]
+  },
+  {
+    "id": "spongebob-turkish",
+    "title": {
+      "en": "Spongebob Is Proud To Be Turkish",
+      "tr": "Spongebob Türk Olmaktan Gurur Duyuyor"
+    },
+    "description": {
+      "en": "Spongebob celebrates Turkish identity.",
+      "tr": "Spongebob Türk kimliğini kutluyor."
+    },
+    "url": "https://media.tenor.com/Average_TurkishCatLover-spongebob-is-proud-to-be-turkish-gif/13291347565744281312",
+    "preview": "https://media.tenor.com/Average_TurkishCatLover-spongebob-is-proud-to-be-turkish-gif/13291347565744281312",
+    "width": 393,
+    "height": 332,
+    "category": "tr",
+    "tags": ["turkish", "meme", "spongebob", "proud", "funny", "national"]
+  },
+  {
+    "id": "nyan-cat-brainrot",
+    "title": {
+      "en": "Nyan Cat Steals Brainrot",
+      "tr": "Nyan Cat Brainrot'u Çalıyor"
+    },
+    "description": {
+      "en": "Nyan Cat meets Gen Alpha brainrot.",
+      "tr": "Nyan Cat Gen Alpha brainrot'la tanışıyor."
+    },
+    "url": "https://media.tenor.com/MDude-nyan-cat-steal-a-brainrot-gen-alpha-roblox-gif/10485176693648471891",
+    "preview": "https://media.tenor.com/MDude-nyan-cat-steal-a-brainrot-gen-alpha-roblox-gif/10485176693648471891",
+    "width": 407,
+    "height": 498,
+    "category": "en",
+    "tags": ["english", "brainrot", "nyan cat", "gen alpha", "roblox", "funny"]
+  },
+  {
+    "id": "brain-try-using-this",
+    "title": {
+      "en": "Try Using This Bro",
+      "tr": "Bunu Kullan Dostum"
+    },
+    "description": {
+      "en": "When someone clearly needs to use their brain.",
+      "tr": "Birinin beynini kullanması gerektiğinde."
+    },
+    "url": "https://media.tenor.com/lifeasliza-brain-brain-meme-gif/15904906183344449914",
+    "preview": "https://media.tenor.com/lifeasliza-brain-brain-meme-gif/15904906183344449914",
+    "width": 245,
+    "height": 224,
+    "category": "en",
+    "tags": ["english", "brain", "meme", "funny", "reaction", "use your brain"]
+  },
+  {
+    "id": "crying-screaming",
+    "title": {
+      "en": "Crying Screaming Meme",
+      "tr": "Ağlayan Çığlık Atan Meme"
+    },
+    "description": {
+      "en": "When you're trying to hold it together but can't.",
+      "tr": "Toparlamaya çalışıyorsun ama yapamıyorsun."
+    },
+    "url": "https://media.tenor.com/dookiebottom37-crying-screaming-reaction-meme-gif/9284154694967642438",
+    "preview": "https://media.tenor.com/dookiebottom37-crying-screaming-reaction-meme-gif/9284154694967642438",
+    "width": 359,
+    "height": 370,
+    "category": "en",
+    "tags": ["english", "crying", "screaming", "reaction", "meme", "funny"]
+  },
+  {
+    "id": "ishowspeed-shocked",
+    "title": {
+      "en": "IShowSpeed Shocked Reaction",
+      "tr": "IShowSpeed Şaşkın Tepkisi"
+    },
+    "description": {
+      "en": "IShowSpeed's iconic shocked reaction.",
+      "tr": "IShowSpeed'in ikonik şaşkın tepkisi."
+    },
+    "url": "https://media.tenor.com/itsrohitofficial-reaction-meme-gaming-jump-scared-gif/13375567245597395475",
+    "preview": "https://media.tenor.com/itsrohitofficial-reaction-meme-gaming-jump-scared-gif/13375567245597395475",
+    "width": 480,
+    "height": 320,
+    "category": "en",
+    "tags": ["english", "ishowspeed", "reaction", "gaming", "shocked", "funny", "streamer"]
+  },
+  {
+    "id": "flight-reacts-no-nose",
+    "title": {
+      "en": "Flight Reacts No Nose",
+      "tr": "Flight Reacts Burunsuz"
+    },
+    "description": {
+      "en": "Flight Reacts with the funny face filter.",
+      "tr": "Flight Reacts komik yüz filtresiyle."
+    },
+    "url": "https://media.tenor.com/BluClues-flight-reacts-no-nose-meme-funny-gif/16679745128310324896",
+    "preview": "https://media.tenor.com/BluClues-flight-reacts-no-nose-meme-funny-gif/16679745128310324896",
+    "width": 449,
+    "height": 461,
+    "category": "en",
+    "tags": ["english", "flight reacts", "funny", "meme", "face filter", "reaction"]
   }
 ]
